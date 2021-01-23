@@ -19,7 +19,7 @@ def biologyworksheet(): #variables: n=random question number; b=flag to exit loo
                 if g==1:
                     self.grade='IGCSE.txt'
                 else:
-                    self.grade='Alevel.txt'
+                    self.grade='A level.txt'
                 
                 self.markedasdone=[]
                  
