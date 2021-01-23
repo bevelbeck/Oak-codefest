@@ -1,1 +1,46 @@
+ import random
 
+def english_ig():
+    unique=[]
+    prefix = ['write a letter', 'write a story','write a blog','write a diary entry', 'write a report']
+    letter = [' to your parents describing your new school and hostel', ' to the hotel manager about the issues you have faced since staying at his hotel', ' to the editor of a newspaper, to persuade them to write an article making a plea to the people to switch over to solar energy to conserve electricity']
+    story = [' on a time when you got lost somewhere', ' about a time you experienced a new emotion/feeling', ' about a time when you rebelled against your parents or teacher']
+    blog = [' on  how to use GitHub and explain its benefits and downsides', ' on your take on the recent events happening about the US elections',' on a new product you recently stumbled upon']
+    diary = [' on your first day on your school trip to Manali', ' about your feeling after a very important exam', ' after a whole day of community service']
+    report = [' on a recently held Seminar on Conservation of Water as a part of World Water Day celebrations', ' on an accident that took place at school', ' on your face']
+    count =0
+    flag = False
+
+    number = int(input("enter the number of questions you want: "))
+
+    while count != number:
+        if count ==0:
+            writing = random.randint (0,4)
+            question = random.randint(0,2)
+            unique.append(question)
+        else:
+            flag = False
+            while (flag!= True):
+                question = random.randint(0,2)
+                for i in range (0,len(unique)):
+                    if (unique[i]==question):
+                        flag = True
+                        break
+                if (flag == False):
+                    break
+            if (flag == False):
+                unique.append(question)
+        if (flag == False):
+            if writing == 0:
+                print(prefix[writing], letter[question])
+            if writing == 1:
+                print(prefix[writing], story[question])
+            if writing == 2:
+                print(prefix[writing], blog[question])
+            if writing == 3:
+                print(prefix[writing], diary[question])
+            if writing == 4:
+                print(prefix[writing], report[question])
+        count +=1
+
+print(english_ig())
