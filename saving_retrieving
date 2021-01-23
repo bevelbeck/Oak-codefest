@@ -8,10 +8,10 @@ def retrieve():
     file=open("CodeFeast_data.txt","r")
     line=file.readline()
     line=line.split("*")
-    print(line)
-    tasks=line[0]
-    deadlines=line[1]
-    tasks=tasks[1:-1]
-    tasks=tasks.split(",")
-    deadlines=deadlines[1:-1]
-    deadlines=deadlines.split(",")
+    task=line[0]
+    deadline=line[1]
+    task=task[2:-2]
+    task=task.split("\', \'")
+    deadline=deadline[1:-1]
+    deadline=deadline.split("\'")
+    return task,deadline
