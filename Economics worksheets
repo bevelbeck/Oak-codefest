@@ -1,4 +1,4 @@
-def economicsworksheet(): #variables: n=random question number; b=flag to exit loop and module mathworksheet;file=variable opening file,Q1 = question extracted
+def economicsworksheet(): #variables: n=random question number; b=flag to exit loop and module; file=variable opening file,Q1 = question extracted
     print("INSTRUCTIONS: \n *Do not leave spaces. \n *Answer must be written in capital letters, unless otherwise mentioned.") 
     global b
     b=False
