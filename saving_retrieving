@@ -5,14 +5,20 @@ def saving(save_item1, save_item2):
     file.close()
 
 def retrieve():
+    import datetime
+    Deadline=[]
     file=open("CodeFeast_data.txt","r")
     line=file.readline()
     line=line.split("*")
     task=line[0]
-    deadline=line[1]
+    retrieved_deadline=line[1]
     task=task[2:-2]
     task=task.split("\', \'")
-    deadline=deadline[2:-2]
-    print(deadline)
-    deadline=deadline.split("\', \'")
-    return task,deadline
+    retrieved_deadline=retrieved_deadline[2:-2]
+    print(retrieved_deadline)
+    retrieved_deadline=retrieved_deadline.split("\', \'")
+    
+    for i in range(len(retrieved_deadline)):
+        Date=datetime.date(int(retrieved_deadline[i][0:4]),int(retrieved_deadline[i][5:7]),int(retrieved_deadline[i][8:10]))
+        Deadline.append(Date)
+    return task,Deadline
