@@ -12,6 +12,7 @@ def retrieve():
     deadline=line[1]
     task=task[2:-2]
     task=task.split("\', \'")
-    deadline=deadline[1:-1]
-    deadline=deadline.split("\'")
+    deadline=deadline[2:-2]
+    print(deadline)
+    deadline=deadline.split("\', \'")
     return task,deadline
