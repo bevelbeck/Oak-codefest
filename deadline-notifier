@@ -1,1 +1,27 @@
-
+import datetime
+def schedule(array, deadline):
+    spaces="                              "
+    n=len(deadline)-1
+    swaps=True
+    while swaps==True:
+          swaps=Fasle
+          for i in range(n):
+              if deadline[i]>deadline[i+1]:
+                  deadline[i],deadline[i+1]=deadline[i+1],deadline[i]
+                  array[i],array[i+1]=array[i+1],array[i]
+                  swaps=True
+          n=n-1
+    print("Tasks                              Due\n")
+    for i in range(len(deadline)):
+        spacelen=30-(len(array[i])-5)
+        print(array[i],spaces[0:spacelen],deadline[i],"\n")
+def reminder(array, deadline):
+    today=datetime.date.today()
+    for i in range(len(array)):
+        daysleft=deadline[i]-today
+        if daysleft.days==1:
+           print(array[i],"is due tomorrow. Please finish it now.")
+        if daysleft.days%2==0:
+           print(array[i],"is due",str(dayleft.days),"days from now. Please plan for it.")
+        
+        
