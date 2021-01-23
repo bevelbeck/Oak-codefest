@@ -1,0 +1,110 @@
+def mathworksheet(): #variables: n=random question number; b=flag to exit loop and module mathworksheet;file=variable opening file,Q1 = question extracted
+    print("INSTRUCTIONS: \n *Do not leave spaces. \n *Answer must be written in the form mentioned in the question. \n *All answers must be in lower case, unless otherwise mentioned.") 
+    global b
+    b=False
+    import random
+    upper=7 #Number of questions from data.txt
+    
+    while b==False:
+        
+        def newreset(): #To reset setting
+            obj=math()
+            obj.start()
+            
+      
+        
+        class math():   #To store current data when module is called
+            def __init__(self,g=input("Enter grade: \n Press 1: for IGCSE \n Press 2: for As and A level \n: ")):
+
+                if g==1:
+                    self.grade='IGCSE.txt'
+                else:
+                    self.grade='Alevel.txt'
+                
+                self.markedasdone=[]
+                 
+                self.file=open( self.grade ,'r')
+
+                self.correct=0
+
+
+            def markasdone(self,n):  #to mark the completed questions
+                self.markedasdone.append(n)
+                if len(self.markedasdone)==upper:
+                    print("Number of correct answers: ",self.correct) 
+                    print("All question sets solved! RESET...")
+                    newreset()
+
+            def checkifdone(self,n):   #To check if question extracted is solved
+                done=False
+                for i in range(0,len(self.markedasdone)):
+                    if self.markedasdone[i]==n:
+                        done=True
+                return done
+            
+            def extract(self,n):     #extracting from .txt file
+                string=''
+                for i in range(0,n):
+                    string=self.file.readline()
+                self.file.close()
+                self.file=open(self.grade,'r')
+                return string
+
+            def formquestion(self,string):    #to form question and the answer
+                Q1=''
+                ans=''
+                
+                while True:
+                    for i in range(0,len(string)):
+                        if string[i]==string[i+1] and string[i+1]==string[i+2] and string[i]=='*':
+                            y=i+4
+                            break
+                        Q1=Q1+string[i]
+                    break
+                
+                while True:
+                    for i in range(y, len(string)-5):
+                        ans=ans+string[i]
+                    break
+                return Q1,ans
+                
+                    
+
+
+            def start(self):   #start function
+              while True:  
+                ch=int(input("Press 1 to exit OR 2 to continue: "))
+                if ch==1:
+                    print("Number of correct answers: ",self.correct)
+                    print("EXITING....")
+                    b=True
+                    break
+                if ch==2:
+                    while True:
+                        n=random.randint(1,upper)
+                        if self.checkifdone(n)==False:
+                             
+                            break
+                     
+                    string=self.extract(n)
+                  
+                    
+                   
+                    Q1,ans=self.formquestion(string)
+                     
+                    print(Q1)
+                    answer=input("Answer:")
+                    if answer==ans:
+                        print("Good Job")
+                        self.correct=self.correct+1
+                    else:
+                        print("Wrong answer! Answer =",ans)
+                    self.markasdone(n) 
+
+        if b==False:
+            newreset()
+        
+        break
+                
+                              
+mathworksheet()       #This part can be deleted after integrating into Main program           
