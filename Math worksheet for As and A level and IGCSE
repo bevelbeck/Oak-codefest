@@ -14,11 +14,14 @@ def mathworksheet(): #variables: n=random question number; b=flag to exit loop a
       
         
         class math():   #To store current data when module is called
-            def __init__(self,g=input("Enter grade: \n Press 1: for IGCSE \n Press 2: for As and A level \n: ")):
+            def __init__(self):
+                g=int(input("Enter 1 for igcse and 2 for As and A level: "))
 
                 if g==1:
+                    print("dddd")
                     self.grade='IGCSE.txt'
                 else:
+                    print("dddd")
                     self.grade='Alevel.txt'
                 
                 self.markedasdone=[]
