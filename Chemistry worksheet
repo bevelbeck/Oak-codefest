@@ -3,8 +3,7 @@ def chemworksheet(): #variables: n=random question number; b=flag to exit loop a
     global b
     b=False
     import random
-    c="c \n d"
-    print(c)
+    
     upper=10 #Number of questions from .txt
     
     while b==False:
@@ -17,7 +16,7 @@ def chemworksheet(): #variables: n=random question number; b=flag to exit loop a
         
         class chem():   #To store current data when module is called
             def __init__(self):
-                g=int(input("Enter 1 for igcse and 2 for As and A level: "))
+                g=int(input("CHOOSE GRADE LEVEL: \n1 for IGCSE \n2 for As and A level: \n \nENTER: "))
 
                 if g==1:
                      
