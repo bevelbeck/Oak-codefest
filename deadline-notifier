@@ -4,7 +4,7 @@ def schedule(array, deadline):
     n=len(deadline)-1
     swaps=True
     while swaps==True:
-          swaps=Fasle
+          swaps=False
           for i in range(n):
               if deadline[i]>deadline[i+1]:
                   deadline[i],deadline[i+1]=deadline[i+1],deadline[i]
