@@ -43,8 +43,8 @@ while repeat==True:
             choice1=input("Incorrect choice. Please choose again:")
 
     if choice1=="1":
-        #CALL MOHNISH'S FUNCTION
-        #CALL RASHI'S FUNCTION
+        #------------------------------------------------------------------------------------------CALL MOHNISH'S FUNCTION (returns TASK, DEADLINES)
+        #------------------------------------------------------------------------------------------CALL RASHI'S FUNCTION
         print("CALLING MOHNISH AND RASHI'S FUNCTION")   #for understanding purpose
     elif choice1=="2":
         text="Subjects to choose from:\n"
@@ -63,28 +63,28 @@ while repeat==True:
             else:
                 choice2=input("Incorrect choice. Please choose again:")
         if choice2=="1":
-            #--------------------------------------------------------call ENGLISH function
+            #------------------------------------------------------------------------------------call ENGLISH function
             print("CALLING ENGLISH WORKSHEET")          #for understanding purpose
         elif choice2=="2":
-            #-------------------------------------------------------call MATHS function
+            #------------------------------------------------------------------------------------call MATHS function
             print("CALLING MATHS WORKSHEET")            #for understanding purpose
         elif choice2=="3":
-            #------------------------------------------------------call PHYSICS function
+            #------------------------------------------------------------------------------------call PHYSICS function
             print("CALLING PHYSICS WORKSHEET")          #for understanding purpose
         elif choice2=="4":
-            #------------------------------------------------------call CHEMISTRY function
+            #------------------------------------------------------------------------------------call CHEMISTRY function
             print("CALLING CHEMISTRY WORKSHEET")        #for understanding purpose
         elif choice2=="5":
-            #------------------------------------------------------call BIOLOGY function
+            #------------------------------------------------------------------------------------call BIOLOGY function
             print("CALLING BIOLOGY WORKSHEET")          #for understanding purpose
         elif choice2=="6":
-            #------------------------------------------------------call ECONOMICS function
+            #------------------------------------------------------------------------------------call ECONOMICS function
             print("CALLING ECONOMICS WORKSHEET")        #for understanding purpose
         elif choice2=="7":
             None
     elif choice1=="3":
         repeat=False
-        # saving data in files
+        # saving data in files  (SAVE TASK, DEADLINES)
         
 print("done")                                           #for understanding purpose
 
