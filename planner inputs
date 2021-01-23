@@ -1,1 +1,53 @@
+#planner inputs
 
+def Planner_Inputs():
+    import datetime
+    from datetime import date
+
+    Task=[]
+    Deadline=[]
+
+    repeat=True
+    while repeat==True:
+        Task_temp=input("Enter task that needs to be completed:")
+        repeat_input_flag=True
+        while repeat_input_flag==True:
+
+            System_date=date.today()
+            try:
+                Deadline_day=int(input("Day to be submitted (Eg.5, means: 5th):"))
+                Deadline_month=int(input("Month to be submitted (Eg.4 , means April):"))
+                Deadline_year=int(input("Year to be submitted(Format:yyyy)Eg. 2021):"))
+                Input_date=datetime.date(Deadline_year,Deadline_month,Deadline_day)
+                repeat_input_flag=False
+            except ValueError:
+                print("Input DAY or MONTH might not exist. Please try again.")
+            else:
+                while Input_date<System_date:
+                    print("invalid date")
+                    Deadline_day=int(input("Day to be submitted (Eg.5, means: 5th):"))
+                    Deadline_month=int(input("Month to be submitted (Eg.4 , means April):"))
+                    Deadline_year=int(input("Year to be submitted(Format:yyyy)Eg. 2021):"))
+                    Input_date=datetime.date(Deadline_year,Deadline_month,Deadline_day)
+                    repeat_input_flag=False
+
+        Task.append(Task_temp)
+        Deadline.append(Input_date)
+        
+        option_flag=False
+        while option_flag==False:
+            option=input("If you want to add more tasks to planner? (options:'y' or 'n'):")
+            if option=="n":
+                repeat=False
+                option_flag=True
+            elif option=="y":
+                option_flag=True
+    return Task, Deadline
+
+
+#DONT CONSIDER THIS 
+"""
+Task,Deadline=Planner_Inputs()
+print(Task)
+print(Deadline)
+"""
