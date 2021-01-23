@@ -14,7 +14,7 @@ def biologyworksheet(): #variables: n=random question number; b=flag to exit loo
       
         
         class biology():   #To store current data when module is called
-            def __init__(self,g=input("Enter grade: \n Press 1: for IGCSE \n Press 2: for As and A level \n: ")):
+            def __init__(self,g=int(input("Enter grade: \n Press 1: for IGCSE \n Press 2: for As and A level \n: "))):
 
                 if g==1:
                     self.grade='IGCSEbio.txt'
