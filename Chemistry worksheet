@@ -1,11 +1,11 @@
 def chemworksheet(): #variables: n=random question number; b=flag to exit loop and module mathworksheet;file=variable opening file,Q1 = question extracted
-    print("INSTRUCTIONS: \n *Do not leave spaces. \n *Answer must be written in the form mentioned in the question. \n *All answers must be in lower case, unless otherwise mentioned.") 
+    print("INSTRUCTIONS: \n *Do not leave spaces. \n *All answers must be in upper case, unless otherwise mentioned.") 
     global b
     b=False
     import random
     c="c \n d"
     print(c)
-    upper=10 #Number of questions from data.txt
+    upper=10 #Number of questions from .txt
     
     while b==False:
         
