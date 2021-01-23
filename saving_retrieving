@@ -1,0 +1,12 @@
+def saving(save_item1, save_item2):
+    file=open("CodeFeast_data.txt","w")
+    line=save_item1+"*"+save_item2
+    file.write(line)
+    file.close()
+
+def retrieve():
+    file=open("CodeFeast_data.txt","r")
+    line=file.readline()
+    line=line.split("*")
+    print(line)
+    return line[0],line[1]
