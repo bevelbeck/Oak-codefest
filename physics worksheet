@@ -15,7 +15,7 @@ def physicsworksheet(): #variables: n=random question number; b=flag to exit loo
         
         class physics():   #To store current data when module is called
             def __init__(self):
-                g=int(input("Enter 1 for igcse and 2 for As and A level: "))
+                g=int(input("Enter your grade: \n1 for IGCSE  \n2 for As and A level: "))
 
                 if g==1:
                      
