@@ -3,7 +3,7 @@ def mathworksheet(): #variables: n=random question number; b=flag to exit loop a
     global b
     b=False
     import random
-    upper=7 #Number of questions from data.txt
+    upper=7 #Number of questions from .txt
     
     while b==False:
         
@@ -15,13 +15,13 @@ def mathworksheet(): #variables: n=random question number; b=flag to exit loop a
         
         class math():   #To store current data when module is called
             def __init__(self):
-                g=int(input("Enter 1 for igcse and 2 for As and A level: "))
+                g=int(input("Enter your grade: \n1 for IGCSE  \n2 for As and A level: "))
 
                 if g==1:
-                    print("dddd")
+                     
                     self.grade='IGCSE.txt'
                 else:
-                    print("dddd")
+                     
                     self.grade='Alevel.txt'
                 
                 self.markedasdone=[]
