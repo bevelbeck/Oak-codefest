@@ -1,0 +1,8 @@
+Evaluate 2/7 + 1/5. Give your answer in the form: a/b.****17/35!!!!
+Evaluate 6 + 4(1 - 0.4). Give your answer as a real number.****8.4!!!!
+y is directly proportional to the square of x. Given that y = 8 when x = 4, find y when x = 3. Give your answer in the form of a real number.****4.5!!!!
+Factorise completely 15a + 3ab. Give your answer in the form: (a)(b), where a and b are factors.****(3a)(5+b)!!!!
+Evaluate 0.04 X 0.11. Give your answer as a real number.****0.0044!!!!
+Simplify 4c - 3(2c - 5). Give your answer in the form: a-bc.****15-2c!!!!
+Find the possible values of x, given that x is an integer and 15 < 2x - 3 < 22. Give your answer in the form:a,b,c...,n, in ascending order.****10,11,12!!!!
+ 
