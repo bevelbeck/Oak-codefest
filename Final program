@@ -1,1 +1,90 @@
+#BACKBONE
+
+#add your program functions here
+
+def waiting(no_of_times, symbol, time_gap):     #prints text letter after letter
+    global time
+    for i in range (no_of_times):
+        time.sleep(time_gap)
+        print(symbol,end="")
+
+import time
+
+subject=["English", "Maths", "Physics", "Chemistry", "Biology", "Economics","RETURN"]
+repeat=True
+while repeat==True:
+    print("===================================================================")
+    text="Welcome to your personal study assistant!!\n"
+    for index in range(len(text)):
+        waiting(1, text[index], 0.01)
+    print("===================================================================\n\n")
+    waiting(1, "\n", 1)
+    
+    text="THINGS YOU CAN EXPLORE"
+    for index in range(len(text)):
+        waiting(1, text[index], 0.01)
+    waiting(2, ".", 1)
+    text1="\n1. Get prepared for school deadlines\n"
+    text2="2. Get study materials\n"
+    text3="3. Close App\n\n"
+    for index in range(len(text1)):
+        waiting(1, text1[index], 0.01)
+    for index in range(len(text2)):
+        waiting(1, text2[index], 0.01)
+    for index in range(len(text3)):
+        waiting(1, text3[index], 0.01)
+    choice1=input("your Choice? :")
+
+    choice1_flag=False
+    while choice1_flag==False:
+        if choice1=="1" or choice1=="2" or choice1=="3":
+            choice1_flag=True
+        else:
+            choice1=input("Incorrect choice. Please choose again:")
+
+    if choice1=="1":
+        #CALL MOHNISH'S FUNCTION
+        #CALL RASHI'S FUNCTION
+        print("CALLING MOHNISH AND RASHI'S FUNCTION")   #for understanding purpose
+    elif choice1=="2":
+        text="Subjects to choose from:\n"
+        for index in range(len(text)):
+            waiting(1, text[index], 0.01)
+            
+        for index in range(len(subject)):
+            text=str(index+1)+"."+subject[index]+"\n"
+            for index in range(len(text)):
+                waiting(1, text[index], 0.01)
+        choice2=input("Your Choice? :")
+        choice2_flag=False
+        while choice2_flag==False:
+            if choice2=="1" or choice2=="2" or choice2=="3" or choice2=="4" or choice2=="5" or choice2=="6" or choice2=="7":
+                choice2_flag=True
+            else:
+                choice2=input("Incorrect choice. Please choose again:")
+        if choice2=="1":
+            #--------------------------------------------------------call ENGLISH function
+            print("CALLING ENGLISH WORKSHEET")          #for understanding purpose
+        elif choice2=="2":
+            #-------------------------------------------------------call MATHS function
+            print("CALLING MATHS WORKSHEET")            #for understanding purpose
+        elif choice2=="3":
+            #------------------------------------------------------call PHYSICS function
+            print("CALLING PHYSICS WORKSHEET")          #for understanding purpose
+        elif choice2=="4":
+            #------------------------------------------------------call CHEMISTRY function
+            print("CALLING CHEMISTRY WORKSHEET")        #for understanding purpose
+        elif choice2=="5":
+            #------------------------------------------------------call BIOLOGY function
+            print("CALLING BIOLOGY WORKSHEET")          #for understanding purpose
+        elif choice2=="6":
+            #------------------------------------------------------call ECONOMICS function
+            print("CALLING ECONOMICS WORKSHEET")        #for understanding purpose
+        elif choice2=="7":
+            None
+    elif choice1=="3":
+        repeat=False
+        # saving data in files
+        
+print("done")                                           #for understanding purpose
 
