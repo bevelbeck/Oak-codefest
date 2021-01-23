@@ -9,4 +9,9 @@ def retrieve():
     line=file.readline()
     line=line.split("*")
     print(line)
-    return line[0],line[1]
+    tasks=line[0]
+    deadlines=line[1]
+    tasks=tasks[1:-1]
+    tasks=tasks.split(",")
+    deadlines=deadlines[1:-1]
+    deadlines=deadlines.split(",")
