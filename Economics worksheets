@@ -3,7 +3,7 @@ def economicsworksheet(): #variables: n=random question number; b=flag to exit l
     global b
     b=False
     import random
-    upper=3 #Number of questions from data.txt
+    upper=10 #Number of questions from data.txt
     
     while b==False:
         
@@ -107,5 +107,4 @@ def economicsworksheet(): #variables: n=random question number; b=flag to exit l
         break
                 
                               
-economicsworksheet()       #This part can be deleted after integrating into Main program    
-
+economicsworksheet()       #This part can be deleted after integrating into Main program   
