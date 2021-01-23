@@ -21,7 +21,10 @@ def reminder(array, deadline):
         daysleft=deadline[i]-today
         if daysleft.days==1:
            print(array[i],"is due tomorrow. Please finish it now.")
-        if daysleft.days%2==0:
-           print(array[i],"is due",str(dayleft.days),"days from now. Please plan for it.")
+        if daysleft.days>7:
+            if daysleft.days%4==0:
+                print(array[i],"is due",str(dayleft.days),"days from now. Please plan for it.")
+        elif daysleft.days%2==0:
+            print(array[i],"is due",str(dayleft.days),"days from now. Please plan for it.")
         
         
