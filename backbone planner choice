@@ -1,0 +1,21 @@
+    if choice1=="1":
+        file=open("CodeFest_data.txt","r")
+        line=file.readline()
+        if len(line)==0:
+            array_of_tasks=[]
+            array_of_deadlines=[]
+            array_of_tasks, array_of_deadlines= Planner_Inputs(array_of_tasks, array_of_deadlines)
+            array_of_deadlines=conversion_to_datetime(array_of_deadlines)
+            schedule(array_of_tasks, array_of_deadlines)
+            reminder(array_of_tasks, array_of_deadlines)
+        else:
+            array_of_tasks, array_of_deadlines=retrieve()
+            array_of_tasks, array_of_deadlines= Planner_Inputs(array_of_tasks, array_of_deadlines)
+            array_of_deadlines=conversion_to_datetime(array_of_deadlines)
+            schedule(array_of_tasks, array_of_deadlines)
+            reminder(array_of_tasks, array_of_deadlines)
+        array_of_deadlines=conversion_to_string(array_of_deadlines)
+        print(array_of_tasks)
+        print(array_of_deadlines)
+        saving(array_of_tasks, array_of_deadlines)
+        file.close()
