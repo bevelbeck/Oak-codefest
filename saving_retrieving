@@ -1,6 +1,6 @@
 def saving(save_item1, save_item2):
     file=open("CodeFest_data.txt","w")
-    line=save_item1+"*"+save_item2
+    line=str(save_item1)+"*"+str(save_item2)
     file.write(line)
     file.close()
 
@@ -17,8 +17,18 @@ def retrieve():
     retrieved_deadline=retrieved_deadline[2:-2]
     print(retrieved_deadline)
     retrieved_deadline=retrieved_deadline.split("\', \'")
+    print(retrieved_deadline)
     
+    return task,retrieved_deadline
+
+def conversion_to_datetime(retrieved_deadline):
+    Deadline=[]
     for i in range(len(retrieved_deadline)):
         Date=datetime.date(int(retrieved_deadline[i][0:4]),int(retrieved_deadline[i][5:7]),int(retrieved_deadline[i][8:10]))
         Deadline.append(Date)
-    return task,Deadline
+    return Deadline
+
+def conversion_to_string(Deadline):
+    for i in range(len(Deadline)):
+        Deadline[i]=str(Deadline[i])
+    return Deadline
