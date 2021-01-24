@@ -1,8 +1,7 @@
-def Planner_Inputs(Task, Deadline):
+def Planner_Inputs(Task, Deadline, repeat):
     import datetime
     from datetime import date
 
-    repeat=True
     while repeat==True:
         Task_temp=input("Enter task that needs to be completed:")
         repeat_input_flag=True
