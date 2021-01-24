@@ -4,13 +4,23 @@
         if len(line)==0:
             array_of_tasks=[]
             array_of_deadlines=[]
-            array_of_tasks, array_of_deadlines= Planner_Inputs(array_of_tasks, array_of_deadlines)
+            continue_flag=True
+            array_of_tasks, array_of_deadlines= Planner_Inputs(array_of_tasks, array_of_deadlines, continue_flag)
             array_of_deadlines=conversion_to_datetime(array_of_deadlines)
             schedule(array_of_tasks, array_of_deadlines)
             reminder(array_of_tasks, array_of_deadlines)
         else:
             array_of_tasks, array_of_deadlines=retrieve()
-            array_of_tasks, array_of_deadlines= Planner_Inputs(array_of_tasks, array_of_deadlines)
+            option_flag=False
+            while option_flag==False:
+                option=input("If you want to add more tasks to planner? (options:'y' or 'n'):")
+                if option=="n":
+                    continue_flag=False
+                    option_flag=True
+                elif option=="y":
+                    continue_flag=True
+                    option_flag=True
+            array_of_tasks, array_of_deadlines= Planner_Inputs(array_of_tasks, array_of_deadlines, continue_flag)
             array_of_deadlines=conversion_to_datetime(array_of_deadlines)
             schedule(array_of_tasks, array_of_deadlines)
             reminder(array_of_tasks, array_of_deadlines)
