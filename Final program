@@ -776,22 +776,22 @@ while repeat==True:
                 choice2=input("Incorrect choice. Please choose again:")
         if choice2=="1":
             #------------------------------------------------------------------------------------call ENGLISH function
-            english()          #for understanding purpose
+            english()         
         elif choice2=="2":
             #------------------------------------------------------------------------------------call MATHS function
-            mathworksheet()           #for understanding purpose
+            mathworksheet()       
         elif choice2=="3":
             #------------------------------------------------------------------------------------call PHYSICS function
-            physicsworksheet()        #for understanding purpose
+            physicsworksheet()      
         elif choice2=="4":
             #------------------------------------------------------------------------------------call CHEMISTRY function
-            chemworksheet()       #for understanding purpose
+            chemworksheet()     
         elif choice2=="5":
             #------------------------------------------------------------------------------------call BIOLOGY function
-            biologyworksheet()          #for understanding purpose
+            biologyworksheet()       
         elif choice2=="6":
             #------------------------------------------------------------------------------------call ECONOMICS function
-            economicsworksheet()        #for understanding purpose
+            economicsworksheet()       
         elif choice2=="7":
             None
     elif choice1=="3":
