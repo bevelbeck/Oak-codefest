@@ -1,11 +1,6 @@
-#planner inputs
-
-def Planner_Inputs():
+def Planner_Inputs(Task, Deadline):
     import datetime
     from datetime import date
-
-    Task=[]
-    Deadline=[]
 
     repeat=True
     while repeat==True:
@@ -30,9 +25,8 @@ def Planner_Inputs():
                     Deadline_year=int(input("Year to be submitted(Format:yyyy)Eg. 2021):"))
                     Input_date=datetime.date(Deadline_year,Deadline_month,Deadline_day)
                     repeat_input_flag=False
-
         Task.append(Task_temp)
-        Deadline.append(Input_date)
+        Deadline.append(str(Input_date))
         
         option_flag=False
         while option_flag==False:
@@ -43,11 +37,3 @@ def Planner_Inputs():
             elif option=="y":
                 option_flag=True
     return Task, Deadline
-
-
-#DONT CONSIDER THIS 
-"""
-Task,Deadline=Planner_Inputs()
-print(Task)
-print(Deadline)
-"""
