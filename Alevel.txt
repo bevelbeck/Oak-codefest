@@ -1,0 +1,8 @@
+
+-Find the quotient and remainder when x^4 is divided by x^2+2x-1. Give your answer in the form of quotient=a,remainder=b, in descending order of powers.****quotient=x^2-2x+5,remainder=-12x+5!!!!
+-The equation x^3 = 3x + 7 has one real root, denoted by a. Within which interval does it lie?Write your answer in the form a,b where a<b.****2,3!!!!
+-The complex number u is given by u = 8 - 15i. Showing all necessary working, find the two square roots of u. Give answers in the form a + ib, where the numbers a and b are real and exact. Give your answer in the form:+-(a+ib)/(c).****+-(5-3i)/(sqroot2)!!!!
+-The equations of two linesl and m are r = 3i - j - 2k + a(-i + j + 4k) and r = 4i + 4j - 3k + b(-2i + j - 2k) respectively. Do they intersect? Give your amswer in the form: yes or no.****no!!!!
+-A geometric progression has first term 3a and common ratio r. A second geometric progression has first term a and common ratio -2r. The two progressions have the same sum to infinity. Find the value of r. Give your answer in the form:a/b****-2/7!!!!
+-The first two terms of an arithmetic progression are 15 and 19 respectively. The first two terms of a second arithmetic progression are 420 and 415 respectively. The two progressions have the same sum of the first n terms. Find the value of n.****91!!!!
+-Relative to an origin O, the position vectors of two points P and Q are p and q respectively. The point R is such that PQR is a straight line with Q the mid-point of PR. Find the position vector of R in terms of p and q, simplifying your answer. Give your answer in the form: a-b****2q-p!!!!
